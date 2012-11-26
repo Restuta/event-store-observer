@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Restuta.ConsoleExtensions.Colorfull;
 
 namespace EventStoreObserver.Console
 {
@@ -10,6 +11,8 @@ namespace EventStoreObserver.Console
     {
         static void Main(string[] args)
         {
+
+            
             //v1
             //connect to mongo
             //start quering EventStore collection (assuming it's one for now?) with time intervals, let's say once in
@@ -18,6 +21,16 @@ namespace EventStoreObserver.Console
             //
             //format message
             //output colored
+        }
+
+        public static void W(string text)
+        {
+            ColorfulConsole.Write(text);
+        }
+
+        public static void WL(string text)
+        {
+            ColorfulConsole.WriteLine(text);
         }
     }
 }
